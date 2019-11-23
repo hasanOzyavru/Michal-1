@@ -1,3 +1,51 @@
 @import "body.css";
 @import "footer.css";
 @import "header.css";
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 600px;
+}
+
+#sections {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+    grid-template-rows: 150px, 350px, 200px;
+    grid-template-areas:
+        ". h h h h ."
+        "m m m . s s"
+        ". . . f f f";
+}
+
+.div1 {
+    color: red;
+    grid-area: h;
+}
+
+.div2 {
+    color: green;
+    grid-area: m;
+}
+
+.div3 {
+    color: blue;
+    grid-area: s;
+}
+
+.div4 {
+    color: brown;
+    grid-area: f;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+li a {
+    text-decoration: none;
+    padding: 10px;
+    color: red;
+}
